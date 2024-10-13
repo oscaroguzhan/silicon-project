@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+/* color variables */
 :root {
   --color-primary: #6366f1;
   --color-dark: #0b0f19;
@@ -34,6 +35,17 @@ body {
   font-size: 16px;
   
 }
+/* utility classes start*/
+/* utility classes end */
+
+
+
+/* global styles start */
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
 .container {
   /* mobile first */
   width: 100%;
@@ -50,6 +62,7 @@ a:focus {
   text-decoration: none;
   transition: var(--transition-time);
 }
+/* global styles end */
 
 .btn-primary {
   background-color: var(--color-primary);
@@ -93,19 +106,21 @@ a:focus {
   width: 45px;
   height: 25px;
 }
-.toggle-switch input {
+.toggle-switch input[type="checkbox"] {
   opacity: 0;
+
+  &:checked ~ .slider {
+    background-color: var(--color-primary);
+  }
+  &:focus ~ .slider {
+    box-shadow: 0 0 1px var(--color-primary)
+  }
+  &:checked ~ .slider::before {
+    transform: translateX(18px);
+    background-color: var(--color-white);
+  }
 }
-.toggle-switch input:checked +.slider {
-  background-color: var(--color-primary);
-}
-.toggle-switch input:focus + .slider {
-  box-shadow: 0 0 1px var(--color-primary)
-}
-.toggle-switch input:checked + .slider:before {
-  transform: translateX(18px);
-  background-color: var(--color-white);
-}
+
 .toggle-switch .slider {
   position: absolute;
   cursor: pointer;
@@ -116,7 +131,7 @@ a:focus {
   background-color: var(--color-gray);
   transition: var(--transition-time);
 }
-.toggle-switch .slider:before {
+.toggle-switch .slider::before {
   position: absolute;
   content: "";
   height: 20px;
@@ -129,7 +144,7 @@ a:focus {
 .toggle-switch .slider.round {
   border-radius: 35px;
 }
-.toggle-switch .slider.round:before {
+.toggle-switch .slider.round::before {
   border-radius: 50%;
 }
 .navbar {
@@ -160,6 +175,23 @@ header .container {
   padding-bottom:1rem;
   padding-top:1rem;
 }
+
+footer {
+  font-size: 14px;
+  color: var(--color-gray-600);
+  padding: 1rem auto;
+  .container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+  }
+  .credit {
+    display: none;
+  }
+}
+
+
 /* media queries for tablet */
 @media (min-width: 768px) {
   .container {
@@ -170,6 +202,11 @@ header .container {
   }
   header .container {
     gap: 4rem;
+  }
+  footer {
+    .credit {
+      display: block;
+    }
   }
 }
 /* media queries for desktop */

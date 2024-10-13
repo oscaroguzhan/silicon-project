@@ -3,38 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TODO: Meta tags description and author -->
+  <meta name="description" content="Silicon website is a part of HTML5 and CSS3 course. It is a simple website to practice HTML and CSS and responsive design." >
+  <meta name="author" content="Oscar Wihlborg Ergun" >
   <link rel="stylesheet" href="https://kit.fontawesome.com/a576612222.css" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/main.css">
+  <link rel="silicon icon" href="/assets/images/favicon.ico" type="image/x-icon">
+
   <title>Silicon</title>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <a href="index.html" id="logo">
-        <img src="/assets/images/navlogo.svg" alt="Silicon Logo">
-      </a>
-      <nav id="main-menu" class="navbar">
-        <a href="#" class="nav-link">Features</a>
-      </nav>
-      <div id="darkmode-toggle-switch"
-       class="btn-toggle-switch">
-        <span class="label">
-          Dark Mode
-        </span>
-        <label for="darkmode-switch" class="toggle-switch">
-          <input type="checkbox" name="dark-mode-switch" id="darkmode-switch">
-          <span class="slider round"></span>
-        </label>
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <a href="index.html" id="logo">
+          <img src="/assets/images/navlogo.svg" alt="Silicon Logo">
+        </a>
+        <nav id="main-menu" class="navbar">
+          <a href="#" class="nav-link">Features</a>
+        </nav>
+        <div id="darkmode-toggle-switch"
+         class="btn-toggle-switch">
+          <span class="label">
+            Dark Mode
+          </span>
+          <label for="darkmode-switch" class="toggle-switch">
+            <input type="checkbox" name="dark-mode-switch" id="darkmode-switch">
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <a id="signin"
+        href="#" class="btn-primary">
+          <i class="fa-light fa-user-large fa-fade"></i>
+          <span>Sign in / up</span>
+        </a>
+        <button class="btn-mobile" type="button">
+          <i class="fa-regular fa-bars"></i>
+        </button>
       </div>
-      <a id="signin"
-      href="#" class="btn-primary">
-        <i class="fa-light fa-user-large fa-fade"></i>
-        <span>Sign in / up</span>
-      </a>
-      <button class="btn-mobile">
-        <i class="fa-regular fa-bars"></i>
-      </button>
-    </div>
-  </header>
+    </header>
+    <!-- main content -->
+    <main></main>
+    <!-- footer -->
+     <footer>
+      <div class="container">
+        <p class="copyright">© 2024 Silicon. All rights reserved.</p>
+        <p class="credit">Credit MadrasThemes</p>
+      </div>
+     </footer>
+  </div>
 </body>
 </html>
