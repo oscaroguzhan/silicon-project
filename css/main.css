@@ -176,6 +176,27 @@ header .container {
   padding-top:1rem;
 }
 
+#brands {
+  display: none;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  .container {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+.brand-box {
+  border: 1px solid var(--color-gray-100);
+  height: 100px;
+  border-radius: 8px;
+  width: 196px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
 footer {
   font-size: 14px;
   color: var(--color-gray-600);
@@ -191,7 +212,6 @@ footer {
   }
 }
 
-
 /* media queries for tablet */
 @media (min-width: 768px) {
   .container {
@@ -202,6 +222,13 @@ footer {
   }
   header .container {
     gap: 4rem;
+  }
+  #brands {
+    display: block;
+    
+    #brand-5, #brand-6 {
+      display:none;
+    }
   }
   footer {
     .credit {
@@ -229,5 +256,10 @@ footer {
   }
   .btn-mobile {
     display:none;
+  }
+  #brands {
+    #brand-5, #brand-6 {
+      display:flex;
+    }
   }
 }
